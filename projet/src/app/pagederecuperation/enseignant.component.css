@@ -1,0 +1,36 @@
+
+.start{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-bottom: 8%;
+    padding-top: 2%;
+    padding-right: 5%;
+    padding-left: 5%;
+     box-shadow: 0 0 10px 5px;
+    background: lightgrey;
+
+}
+
+h1{
+    margin-top: 0;
+}
+
+input{
+padding-right: 20%;
+margin-left: 5%;
+}
+
+.email{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    margin-top: 3%;
+
+}
+
+button{
+    float: right;
+}
+

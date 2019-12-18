@@ -1,0 +1,17 @@
+<div class="start">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+                <h1>Mot de passe oublié?</h1>    
+                <p> Ne vous inquiétez pas, ceci est la page de recupération de votre mot de passe. Pour cela veuillez entrer votre adresse email pour vous créer un nouveau mot de passe </p>
+             
+                <div class="email">
+                    <label for="defaultSubscriptionFormEmail"> Adresse email</label>
+                    <input type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="E-mail"
+                     ngModel
+                     name ="userEmail"
+                     required>
+    
+                </div>
+                <button class="btn btn-info" type="submit">Retrouver mon mot de passe</button>
+        </form>
+</div>
+    

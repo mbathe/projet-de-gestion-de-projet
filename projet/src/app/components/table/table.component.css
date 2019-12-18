@@ -1,0 +1,27 @@
+.foko-kija-container {
+    width: 100%;
+    margin: 0%;
+}
+
+.foko-kija-cell {
+    padding: 0px 20px 0px 20px;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.scroll {
+    overflow-x: scroll;
+}
+
+.foko-kija-paginator {
+    position: relative;
+    left: 0px;
+}

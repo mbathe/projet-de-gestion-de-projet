@@ -1,0 +1,42 @@
+<!-- <div class="foko-kija-container mat-elevation-z8">
+    <table>
+        <thead>
+            <tr>
+                <th mat-header-cell *ngFor="let th of table.colonnes">{{th.getName()}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tr of table.lignes">
+                <td mat-cell *ngFor="let td of tr.data">{{td.getContent()}}</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+    <mat-paginator [pageSizeOptions]="[2, 5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+ -->
+<div class="foko-kija-container">
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrer le tableau" class=".foko-kija-filtre">
+    </mat-form-field>
+    <div class="mat-elevation-z8 scroll">
+        <table mat-table [dataSource]="dataSource" matSort>
+            <ng-container matColumnDef="ID">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element[id]}} </td>
+            </ng-container>  
+        
+            <ng-container *ngFor="let colName of displayedColumns" matColumnDef="{{colName}}">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> {{colName}} </th>
+                <td mat-cell *matCellDef="let element"> <div class="foko-kija-cell"> {{element[colName]}} </div> </td>
+            </ng-container>            
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <div class="foko-kija-paginator">
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>
